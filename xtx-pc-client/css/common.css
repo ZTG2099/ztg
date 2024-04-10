@@ -1,0 +1,245 @@
+/* 各个页面相同的样式表 */
+/* 版心 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* <!-- 快捷导航 --> */
+.shortcut{
+    height: 52px;
+    background-color: #333;
+}
+/* 快捷导航的版心范围 */
+.shortcut .wrapper {
+    height: 52px;
+    /* background-color: rgb(63, 219, 102); */
+}
+
+/* 浮动ul li */
+.shortcut .wrapper ul {
+    float: right;
+}
+
+.shortcut .wrapper li {
+    float: left;
+    line-height: 52px;
+}
+
+/* 设置导航文字 */
+.shortcut .wrapper a {
+    /* 内边距 */
+    padding:0 16px;
+    /* 边框 */
+    border-right: 1px solid #666;
+    /* 字体大小 */
+    font-size: 16px;
+    /* 颜色 */
+    color: #dcdcdc;
+}
+
+.shortcut .wrapper a span {
+    /* 转模式，为插图做准备 */
+    display: inline-block;
+    /* 设置宽高 */
+    width: 11px;
+    height: 16px;
+    /* 精灵图的插入 */
+    background-position: -160px -70px;
+    background-image: url(../images/sprites.png);
+    /* 图片与文字对齐 */
+    vertical-align: middle;
+    /* 设置右边距 */
+    margin-right: 8px;
+}
+
+/* 头部 */
+.header {
+    margin: 30px auto;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+.logo{
+    float: left;
+    width: 207px;
+    height: 70px;
+    /* background-color: pink; */
+}
+.nav {
+    float: left;
+    height: 70px;
+    margin-left: 40px;
+    /* background-color: blue; */
+}
+
+.search {
+    position: relative;
+    float: left;
+    margin-left: 34px;
+    margin-top: 24px;
+    width: 172px;
+    height: 30px;
+    border-bottom:2px solid #e7e7e7 ;
+    /* background-color:#000; */
+}
+
+.search input {  
+    padding-left: 30px;
+    width: 172px;
+    height: 28px;
+}
+
+.search span {
+    position: absolute;
+    left: 2px ;
+    top: 0 ;
+    /* 绝对定位，盒子具备行内块特点 */
+    /* display: inline-block;可去 */
+    width: 18px;
+    height: 18px;
+    /* background-color: #000; */
+    background-image: url(../images/sprites.png);
+    background-position: -79px -69px;
+}
+
+.search input::p laceholder {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.car {
+    position: relative;
+    margin-top: 28px;
+    float: left;
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    /* background-color: skyblue; */
+    background-image: url(../images/sprites.png);
+    background-position: -119px -69px;
+}
+
+.car span {
+    /* 绝对定位，盒子具备行内块特点 */
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+
+    font-size: 13px;
+    color: #ccc;
+    text-align: center;
+    line-height: 15px;
+}
+
+.logo h1 a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    /* 目的是让h1里的字看不见 */
+    font-size: 0;
+}
+
+.nav  {
+    float: left;
+    margin-left: 40px;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+.nav li {
+    float: left;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.nav li a  {
+    padding-bottom: 7px;
+}
+
+.nav li a:hover {
+    color: green;
+    border-bottom: 1px solid #27ba9b;
+}
+
+/* 版权区域footer */
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+.footer .wrapper {
+    width: 1393px;
+}
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 1px solid #434343;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+    /* background-color: pink; */
+    line-height: 58px;
+}
+
+.footer .top li:last-child {
+    margin-right: 0 ;
+}
+
+/* 伪元素添加的标签 行内 */
+/* 如果行内和行内文字无法通过vertail-align或行高对齐，定位 */
+.footer .top li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: inline-block; */
+    content:'' ;
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: middle;
+}
+
+/* 第二个li里面的before添加背景图位置属性 */
+.footer .top li:nth-child(2)::before {
+    background-position: -64px 0;
+}
+
+.footer .top li:nth-child(3)::before {
+    background-position: -130px 0;
+}
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}
+
+
